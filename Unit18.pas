@@ -1,0 +1,1046 @@
+unit Unit18;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, sSkinManager, StdCtrls, sButton, acPNG, ExtCtrls, acImage,
+  sGauge, sBevel, sLabel;
+
+type
+  TForm18 = class(TForm)
+    sLabel17: TsLabel;
+    sLabel18: TsLabel;
+    sLabel16: TsLabel;
+    sLabel15: TsLabel;
+    sLabel14: TsLabel;
+    sLabel12: TsLabel;
+    sLabel10: TsLabel;
+    sLabel8: TsLabel;
+    sLabel6: TsLabel;
+    sBevel1: TsBevel;
+    sLabel1: TsLabel;
+    sGauge1: TsGauge;
+    sLabel3: TsLabel;
+    sLabel7: TsLabel;
+    sLabel9: TsLabel;
+    sLabel11: TsLabel;
+    sLabel13: TsLabel;
+    sImage1: TsImage;
+    sImage2: TsImage;
+    sButton2: TsButton;
+    sSkin: TsSkinManager;
+    sLabel5: TsLabel;
+    sLabel2: TsLabel;
+    sLabel4: TsLabel;
+    sLabel19: TsLabel;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure sLabel7MouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure sLabel9MouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure sLabel11MouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure sLabel13MouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure FormMouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure sButton2Click(Sender: TObject);
+    procedure sImage1MouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure sLabel7Click(Sender: TObject);
+    procedure sLabel9Click(Sender: TObject);
+    procedure sLabel11Click(Sender: TObject);
+    procedure sLabel13Click(Sender: TObject);
+    procedure sImage2Click(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form18: TForm18;
+  otv: integer;
+implementation
+
+uses Unit2;
+
+{$R *.dfm}
+
+procedure TForm18.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+form2.Show;
+end;
+
+
+
+
+
+procedure TForm18.sLabel7MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+if  sLabel7.Visible=true then
+sLabel8.Visible:=true;
+end;
+
+procedure TForm18.sLabel9MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+if   sLabel9.Visible=true then
+sLabel10.Visible:=true;
+end;
+
+procedure TForm18.sLabel11MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+if   sLabel11.Visible=true then
+sLabel12.Visible:=true;
+end;
+
+procedure TForm18.sLabel13MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+if   sLabel13.Visible=true then
+sLabel14.Visible:=true;
+end;
+
+procedure TForm18.FormMouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+sLabel14.Visible:=false;
+sLabel12.Visible:=false;
+sLabel10.Visible:=false;
+sLabel8.Visible:=false;
+simage2.visible:=false;
+end;
+
+procedure TForm18.sButton2Click(Sender: TObject);
+begin
+form2.show;
+form18.close;
+end;
+
+procedure TForm18.sImage1MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+simage2.visible:=true;
+end;
+
+procedure TForm18.sLabel7Click(Sender: TObject);
+begin
+sLabel13.Visible:=false;
+sLabel11.Visible:=false;
+sLabel9.Visible:=false;
+sLabel7.Visible:=false;
+simage1.visible:=true;
+case  sGauge1.Progress of
+10:
+  begin
+   sLabel12.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel16.Font.Color:=clGreen;
+   sLabel15.Font.Color:=clmaroon;
+   sLabel17.Font.Color:=clMaroon;
+   sLabel18.Font.Color:=clMaroon;
+  end;
+20:
+  begin
+   sLabel14.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel16.Font.Color:=clMaroon;
+   sLabel15.Font.Color:=clmaroon;
+   sLabel17.Font.Color:=clMaroon;
+   sLabel18.Font.Color:=clGreen;
+  end;
+30:
+  begin
+   inc(otv);
+   sLabel8.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel16.Font.Color:=clMaroon;
+   sLabel15.Font.Color:=clGreen;
+   sLabel17.Font.Color:=clMaroon;
+   sLabel18.Font.Color:=clMaroon;
+  end;
+40:
+  begin
+   sLabel14.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel18.Font.Color:=clGreen;
+   sLabel16.Font.Color:=clMaroon;
+   sLabel15.Font.Color:=clmaroon;
+   sLabel17.Font.Color:=clMaroon;
+  end;
+50:
+    begin
+   sLabel10.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel17.Font.Color:=clGreen;
+   sLabel15.Font.Color:=clMaroon;
+   sLabel16.Font.Color:=clMaroon;
+   sLabel18.Font.Color:=clMaroon;
+  end;
+60:
+  begin
+   inc(otv);
+   sLabel8.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel16.Font.Color:=clMaroon;
+   sLabel15.Font.Color:=clGreen;
+   sLabel17.Font.Color:=clMaroon;
+   sLabel18.Font.Color:=clMaroon;
+  end;
+70:
+  begin
+   sLabel12.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel16.Font.Color:=clGreen;
+   sLabel15.Font.Color:=clMaroon;
+   sLabel18.Font.Color:=clMaroon;
+   sLabel17.Font.Color:=clMaroon;
+  end;
+80:
+  begin
+   sLabel12.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel16.Font.Color:=clGreen;
+   sLabel15.Font.Color:=clMaroon;
+   sLabel18.Font.Color:=clMaroon;
+   sLabel17.Font.Color:=clMaroon;
+  end;
+90:
+  begin
+   sLabel14.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel18.Font.Color:=clGreen;
+   sLabel16.Font.Color:=clMaroon;
+   sLabel15.Font.Color:=clmaroon;
+   sLabel17.Font.Color:=clMaroon;
+  end;
+100:
+  begin
+   sLabel8.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel16.Font.Color:=clMaroon;
+   sLabel15.Font.Color:=clGreen;
+   sLabel17.Font.Color:=clMaroon;
+   sLabel18.Font.Color:=clMaroon;
+  end;  
+end;
+end;
+
+procedure TForm18.sLabel9Click(Sender: TObject);
+begin
+sLabel13.Visible:=false;
+sLabel11.Visible:=false;
+sLabel9.Visible:=false;
+sLabel7.Visible:=false;
+simage1.visible:=true;
+case  sGauge1.Progress of
+10:
+  begin
+   sLabel12.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel16.Font.Color:=clGreen;
+   sLabel15.Font.Color:=clmaroon;
+   sLabel17.Font.Color:=clMaroon;
+   sLabel18.Font.Color:=clMaroon;
+  end;
+20:
+  begin
+   sLabel14.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel16.Font.Color:=clMaroon;
+   sLabel15.Font.Color:=clmaroon;
+   sLabel17.Font.Color:=clMaroon;
+   sLabel18.Font.Color:=clGreen;
+  end;
+30:
+  begin
+   sLabel8.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel16.Font.Color:=clMaroon;
+   sLabel15.Font.Color:=clGreen;
+   sLabel17.Font.Color:=clMaroon;
+   sLabel18.Font.Color:=clMaroon;
+  end;
+40:
+  begin
+   sLabel14.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel18.Font.Color:=clGreen;
+   sLabel16.Font.Color:=clMaroon;
+   sLabel15.Font.Color:=clmaroon;
+   sLabel17.Font.Color:=clMaroon;
+  end;
+50:
+    begin
+   inc(otv);
+   sLabel10.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel17.Font.Color:=clGreen;
+   sLabel15.Font.Color:=clMaroon;
+   sLabel16.Font.Color:=clMaroon;
+   sLabel18.Font.Color:=clMaroon;
+  end;
+60:
+  begin
+   sLabel8.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel16.Font.Color:=clMaroon;
+   sLabel15.Font.Color:=clGreen;
+   sLabel17.Font.Color:=clMaroon;
+   sLabel18.Font.Color:=clMaroon;
+  end;
+70:
+  begin
+   sLabel12.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel16.Font.Color:=clGreen;
+   sLabel15.Font.Color:=clMaroon;
+   sLabel18.Font.Color:=clMaroon;
+   sLabel17.Font.Color:=clMaroon;
+  end;
+80:
+  begin
+   sLabel12.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel16.Font.Color:=clGreen;
+   sLabel15.Font.Color:=clMaroon;
+   sLabel18.Font.Color:=clMaroon;
+   sLabel17.Font.Color:=clMaroon;
+  end;
+90:
+  begin
+   sLabel14.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel18.Font.Color:=clGreen;
+   sLabel16.Font.Color:=clMaroon;
+   sLabel15.Font.Color:=clmaroon;
+   sLabel17.Font.Color:=clMaroon;
+  end;
+100:
+  begin
+   sLabel8.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel16.Font.Color:=clMaroon;
+   sLabel15.Font.Color:=clGreen;
+   sLabel17.Font.Color:=clMaroon;
+   sLabel18.Font.Color:=clMaroon;
+  end;
+end;
+end;
+
+procedure TForm18.sLabel11Click(Sender: TObject);
+begin
+sLabel13.Visible:=false;
+sLabel11.Visible:=false;
+sLabel9.Visible:=false;
+sLabel7.Visible:=false;
+simage1.visible:=true;
+case  sGauge1.Progress of
+10:
+  begin
+   inc(otv);
+   sLabel12.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel16.Font.Color:=clGreen;
+   sLabel15.Font.Color:=clmaroon;
+   sLabel17.Font.Color:=clMaroon;
+   sLabel18.Font.Color:=clMaroon;
+  end;
+20:
+  begin
+   sLabel14.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel16.Font.Color:=clMaroon;
+   sLabel15.Font.Color:=clmaroon;
+   sLabel17.Font.Color:=clMaroon;
+   sLabel18.Font.Color:=clGreen;
+  end;
+30:
+  begin
+   sLabel8.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel16.Font.Color:=clMaroon;
+   sLabel15.Font.Color:=clGreen;
+   sLabel17.Font.Color:=clMaroon;
+   sLabel18.Font.Color:=clMaroon;
+  end;
+40:
+  begin
+   sLabel14.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel18.Font.Color:=clGreen;
+   sLabel16.Font.Color:=clMaroon;
+   sLabel15.Font.Color:=clmaroon;
+   sLabel17.Font.Color:=clMaroon;
+  end;
+50:
+    begin
+   sLabel10.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel17.Font.Color:=clGreen;
+   sLabel15.Font.Color:=clMaroon;
+   sLabel16.Font.Color:=clMaroon;
+   sLabel18.Font.Color:=clMaroon;
+  end;
+60:
+  begin
+   sLabel8.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel16.Font.Color:=clMaroon;
+   sLabel15.Font.Color:=clGreen;
+   sLabel17.Font.Color:=clMaroon;
+   sLabel18.Font.Color:=clMaroon;
+  end;
+70:
+  begin
+   Inc(Otv);
+   sLabel12.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel16.Font.Color:=clGreen;
+   sLabel15.Font.Color:=clMaroon;
+   sLabel18.Font.Color:=clMaroon;
+   sLabel17.Font.Color:=clMaroon;
+  end;
+80:
+  begin
+   inc(otv);
+   sLabel12.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel16.Font.Color:=clGreen;
+   sLabel15.Font.Color:=clMaroon;
+   sLabel18.Font.Color:=clMaroon;
+   sLabel17.Font.Color:=clMaroon;
+  end;
+90:
+  begin
+   sLabel14.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel18.Font.Color:=clGreen;
+   sLabel16.Font.Color:=clMaroon;
+   sLabel15.Font.Color:=clmaroon;
+   sLabel17.Font.Color:=clMaroon;
+  end;
+100:
+  begin
+   sLabel8.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel16.Font.Color:=clMaroon;
+   sLabel15.Font.Color:=clGreen;
+   sLabel17.Font.Color:=clMaroon;
+   sLabel18.Font.Color:=clMaroon;
+  end;
+end;
+end;
+
+procedure TForm18.sLabel13Click(Sender: TObject);
+begin
+sLabel13.Visible:=false;
+sLabel11.Visible:=false;
+sLabel9.Visible:=false;
+sLabel7.Visible:=false;
+simage1.visible:=true;
+case  sGauge1.Progress of
+10:
+  begin
+   sLabel12.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel16.Font.Color:=clGreen;
+   sLabel15.Font.Color:=clmaroon;
+   sLabel17.Font.Color:=clMaroon;
+   sLabel18.Font.Color:=clMaroon;
+  end;
+20:
+  begin
+   inc(otv);
+   sLabel14.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel16.Font.Color:=clMaroon;
+   sLabel15.Font.Color:=clmaroon;
+   sLabel17.Font.Color:=clMaroon;
+   sLabel18.Font.Color:=clGreen;
+  end;
+30:
+  begin
+   sLabel8.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel16.Font.Color:=clMaroon;
+   sLabel15.Font.Color:=clGreen;
+   sLabel17.Font.Color:=clMaroon;
+   sLabel18.Font.Color:=clMaroon;
+  end;
+40:
+  begin
+   inc(otv);
+   sLabel14.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel18.Font.Color:=clGreen;
+   sLabel16.Font.Color:=clMaroon;
+   sLabel15.Font.Color:=clmaroon;
+   sLabel17.Font.Color:=clMaroon;
+  end;
+50:
+    begin
+   sLabel10.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel17.Font.Color:=clGreen;
+   sLabel15.Font.Color:=clMaroon;
+   sLabel16.Font.Color:=clMaroon;
+   sLabel18.Font.Color:=clMaroon;
+  end;
+60:
+  begin
+   sLabel8.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel16.Font.Color:=clMaroon;
+   sLabel15.Font.Color:=clGreen;
+   sLabel17.Font.Color:=clMaroon;
+   sLabel18.Font.Color:=clMaroon;
+  end;
+70:
+  begin
+   sLabel12.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel16.Font.Color:=clGreen;
+   sLabel15.Font.Color:=clMaroon;
+   sLabel18.Font.Color:=clMaroon;
+   sLabel17.Font.Color:=clMaroon;
+  end;
+80:
+  begin
+   sLabel12.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel16.Font.Color:=clGreen;
+   sLabel15.Font.Color:=clMaroon;
+   sLabel18.Font.Color:=clMaroon;
+   sLabel17.Font.Color:=clMaroon;
+  end;
+90:
+  begin
+   inc(otv);
+   sLabel14.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel18.Font.Color:=clGreen;
+   sLabel16.Font.Color:=clMaroon;
+   sLabel15.Font.Color:=clmaroon;
+   sLabel17.Font.Color:=clMaroon;
+  end;
+100:
+  begin
+   sLabel8.Visible:=false;
+   sLabel15.Visible:=true;
+   sLabel16.Visible:=true;
+   sLabel17.Visible:=true;
+   sLabel18.Visible:=true;
+   sLabel16.Font.Color:=clMaroon;
+   sLabel15.Font.Color:=clGreen;
+   sLabel17.Font.Color:=clMaroon;
+   sLabel18.Font.Color:=clMaroon;
+  end;
+end;
+end;
+
+procedure TForm18.sImage2Click(Sender: TObject);
+begin
+case  sGauge1.Progress of
+10:
+    begin
+    sLabel3.Caption:='2';
+    slabel5.Left:=123;
+    slabel6.Left:=125;
+    slabel5.Width:=590;
+    slabel6.Width:=590;
+    simage1.visible:=false;
+    slabel5.Caption:='Сколько убито Белых Ходоков за 7 сезонов?';
+    slabel6.Caption:='Сколько убито Белых Ходоков за 7 сезонов?';
+    sLabel15.Visible:=false;
+    sLabel16.Visible:=false;
+    sLabel17.Visible:=false;
+    sLabel18.Visible:=false;
+    sLabel13.Visible:=true;
+    sLabel11.Visible:=true;
+    sLabel9.Visible:=true;
+    sLabel7.Visible:=true;
+    sLabel7.Caption:='1' ;
+    sLabel8.Caption:= '1' ;
+    sLabel15.Caption:= '1'  ;
+    sLabel9.Caption:='2' ;
+    sLabel10.Caption:= '2' ;
+    sLabel17.Caption:= '2'  ;
+    sLabel11.Caption:='3' ;
+    sLabel12.Caption:= '3' ;
+    sLabel16.Caption:= '3'  ;
+    sLabel13.Caption:='4' ;
+    sLabel14.Caption:= '4' ;
+    sLabel18.Caption:= '4'  ;
+    sGauge1.Progress:= sGauge1.Progress+10;
+    sImage1.Visible:=false;
+    sImage2.Visible:=false;
+    end;
+20:
+    begin
+    sLabel3.Caption:='3';
+    slabel5.Left:=40;
+    slabel6.Left:=42;
+    slabel5.Width:=750;
+    slabel6.Width:=750;
+    slabel5.Top:=100;
+    slabel6.Top:=101;
+    simage1.visible:=false;
+    slabel5.Caption:='В какой последовательности Дейнерис захватывала города?';
+    slabel6.Caption:='В какой последовательности Дейнерис захватывала города?';
+    sLabel15.Visible:=false;
+    sLabel16.Visible:=false;
+    sLabel17.Visible:=false;
+    sLabel18.Visible:=false;
+    sLabel13.Visible:=true;
+    sLabel11.Visible:=true;
+    sLabel9.Visible:=true;
+    sLabel7.Visible:=true;
+    sLabel7.Caption:='Астопор, Юнкай, Миэрин' ;
+    sLabel8.Caption:= 'Астопор, Юнкай, Миэрин' ;
+    sLabel15.Caption:= 'Астопор, Юнкай, Миэрин'  ;
+    sLabel9.Caption:='Астопор, Миэрин, Юнкай' ;
+    sLabel10.Caption:= 'Астопор, Миэрин, Юнкай' ;
+    sLabel17.Caption:= 'Астопор, Миэрин, Юнкай'  ;
+    sLabel11.Caption:='Юнкай, Миэрин, Астопор' ;
+    sLabel12.Caption:= 'Юнкай, Миэрин, Астопор' ;
+    sLabel16.Caption:= 'Миэрин, Юнкай, Астопор'  ;
+    sLabel13.Caption:='Миэрин ,Астопор, Юнкай' ;
+    sLabel14.Caption:= 'Миэрин ,Астопор, Юнкай' ;
+    sLabel18.Caption:= 'Миэрин ,Астопор, Юнкай'  ;
+    sGauge1.Progress:= sGauge1.Progress+10;
+    sImage1.Visible:=false;
+    sImage2.Visible:=false;
+    end;
+30:
+    begin
+    sLabel3.Caption:='4';
+    slabel5.Left:=123;
+    slabel6.Left:=125;
+    slabel5.Width:=590;
+    slabel6.Width:=590;
+    simage1.visible:=false;
+    slabel5.Caption:='Как звали мать Петира Бейлиша?';
+    slabel6.Caption:='Как звали мать Петира Бейлиша?';
+    sLabel15.Visible:=false;
+    sLabel16.Visible:=false;
+    sLabel17.Visible:=false;
+    sLabel18.Visible:=false;
+    sLabel13.Visible:=true;
+    sLabel11.Visible:=true;
+    sLabel9.Visible:=true;
+    sLabel7.Visible:=true;
+    sLabel7.Caption:='Кэт' ;
+    sLabel8.Caption:= 'Кэт' ;
+    sLabel15.Caption:= 'Кэт'  ;
+    sLabel9.Caption:='Лиза' ;
+    sLabel10.Caption:= 'Лиза' ;
+    sLabel17.Caption:= 'Лиза'  ;
+    sLabel11.Caption:='Линда' ;
+    sLabel12.Caption:= 'Линда' ;
+    sLabel16.Caption:= 'Линда'  ;
+    sLabel13.Caption:='Алейна' ;
+    sLabel14.Caption:= 'Алейна' ;
+    sLabel18.Caption:= 'Алейна'  ;
+    sGauge1.Progress:= sGauge1.Progress+10;
+    sImage1.Visible:=false;
+    sImage2.Visible:=false;
+    end;
+40:
+    begin
+    sLabel3.Caption:='5';
+    slabel5.Left:=173;
+    slabel6.Left:=175;
+    slabel5.Width:=590;
+    slabel6.Width:=590;
+    simage1.visible:=false;
+    slabel5.Caption:='Где находится Черно-Белый дом?';
+    slabel6.Caption:='Где находится Черно-Белый дом?';
+    sLabel15.Visible:=false;
+    sLabel16.Visible:=false;
+    sLabel17.Visible:=false;
+    sLabel18.Visible:=false;
+    sLabel13.Visible:=true;
+    sLabel11.Visible:=true;
+    sLabel9.Visible:=true;
+    sLabel7.Visible:=true;
+    sLabel7.Caption:='Лис' ;
+    sLabel8.Caption:= 'Лис' ;
+    sLabel15.Caption:= 'Лис'  ;
+    sLabel9.Caption:='Браавос' ;
+    sLabel10.Caption:= 'Браавос' ;
+    sLabel17.Caption:= 'Браавос'  ;
+    sLabel11.Caption:='Пентос' ;
+    sLabel12.Caption:= 'Пентос' ;
+    sLabel16.Caption:= 'Пентос'  ;
+    sLabel13.Caption:='Волантис' ;
+    sLabel14.Caption:= 'Волантис' ;
+    sLabel18.Caption:= 'Волантис'  ;
+    sGauge1.Progress:= sGauge1.Progress+10;
+    sImage1.Visible:=false;
+    sImage2.Visible:=false;
+    end;
+50:
+    begin
+    sLabel3.Caption:='6';
+    slabel5.Left:=143;
+    slabel6.Left:=145;
+    slabel5.Width:=590;
+    slabel6.Width:=590;
+    simage1.visible:=false;
+    slabel5.Caption:='Какая кличка была у лютоволка Роба Старка?';
+    slabel6.Caption:='Какая кличка была у лютоволка Роба Старка?';
+    sLabel15.Visible:=false;
+    sLabel16.Visible:=false;
+    sLabel17.Visible:=false;
+    sLabel18.Visible:=false;
+    sLabel13.Visible:=true;
+    sLabel11.Visible:=true;
+    sLabel9.Visible:=true;
+    sLabel7.Visible:=true;
+    sLabel7.Caption:='Серый Ветер' ;
+    sLabel8.Caption:= 'Серый Ветер' ;
+    sLabel15.Caption:= 'Серый Ветер'  ;
+    sLabel9.Caption:='Лето' ;
+    sLabel10.Caption:= 'Лето' ;
+    sLabel17.Caption:= 'Лето'  ;
+    sLabel11.Caption:='Метель' ;
+    sLabel12.Caption:= 'Метель' ;
+    sLabel16.Caption:= 'Метель'  ;
+    sLabel13.Caption:='Винте' ;
+    sLabel14.Caption:= 'Винте' ;
+    sLabel18.Caption:= 'Винте'  ;
+    sGauge1.Progress:= sGauge1.Progress+10;
+    sImage1.Visible:=false;
+    sImage2.Visible:=false;
+    end;
+60:
+    begin
+    sLabel3.Caption:='7';
+    slabel5.Left:=143;
+    slabel6.Left:=145;
+    slabel5.Width:=590;
+    slabel6.Width:=590;
+    simage1.visible:=false;
+    slabel5.Caption:='Через какой замок Бран попал за стену?';
+    slabel6.Caption:='Через какой замок Бран попал за стену?';
+    sLabel15.Visible:=false;
+    sLabel16.Visible:=false;
+    sLabel17.Visible:=false;
+    sLabel18.Visible:=false;
+    sLabel13.Visible:=true;
+    sLabel11.Visible:=true;
+    sLabel9.Visible:=true;
+    sLabel7.Visible:=true;
+    sLabel7.Caption:='Черный замок' ;
+    sLabel8.Caption:= 'Черный замок' ;
+    sLabel15.Caption:= 'Черный замок'  ;
+    sLabel9.Caption:='Ледовой порог' ;
+    sLabel10.Caption:= 'Ледовой порог' ;
+    sLabel17.Caption:= 'Ледовой порог'  ;
+    sLabel11.Caption:='Твердыня Ночи' ;
+    sLabel12.Caption:= 'Твердыня Ночи' ;
+    sLabel16.Caption:= 'Твердыня Ночи'  ;
+    sLabel13.Caption:='Восточный дозор' ;
+    sLabel14.Caption:= 'Восточный дозор' ;
+    sLabel18.Caption:= 'Восточный дозор'  ;
+    sGauge1.Progress:= sGauge1.Progress+10;
+    sImage1.Visible:=false;
+    sImage2.Visible:=false;
+    end;
+70:
+    begin
+    sLabel3.Caption:='8';
+    slabel5.Left:=40;
+    slabel6.Left:=42;
+    slabel5.Width:=750;
+    slabel6.Width:=750;
+    slabel5.Top:=100;
+    slabel6.Top:=101;
+    simage1.visible:=false;
+    slabel5.Caption:='Какого цвета были драконьи яйца, подаренные Дейнерис?';
+    slabel6.Caption:='Какого цвета были драконьи яйца, подаренные Дейнерис?';
+    sLabel15.Visible:=false;
+    sLabel16.Visible:=false;
+    sLabel17.Visible:=false;
+    sLabel18.Visible:=false;
+    sLabel13.Visible:=true;
+    sLabel11.Visible:=true;
+    sLabel9.Visible:=true;
+    sLabel7.Visible:=true;
+    sLabel7.Caption:='Зеленого, Желтого, Красного' ;
+    sLabel8.Caption:= 'Зеленого, Желтого, Красного' ;
+    sLabel15.Caption:= 'Зеленого, Желтого, Красного'  ;
+    sLabel9.Caption:='Красного, Черного, Зеленого' ;
+    sLabel10.Caption:= 'Красного, Черного, Зеленого' ;
+    sLabel17.Caption:= 'Красного, Черного, Зеленого'  ;
+    sLabel11.Caption:='Зеленого, Желтого, Черного' ;
+    sLabel12.Caption:= 'Зеленого, Желтого, Черного' ;
+    sLabel16.Caption:= 'Зеленого, Желтого, Черного'  ;
+    sLabel13.Caption:='Черного, Красного, Желтого' ;
+    sLabel14.Caption:= 'Черного, Красного, Желтого' ;
+    sLabel18.Caption:= 'Черного, Красного, Желтого'  ;
+    sGauge1.Progress:= sGauge1.Progress+10;
+    sImage1.Visible:=false;
+    sImage2.Visible:=false;
+    end;
+80:
+    begin
+    sLabel3.Caption:='9';
+    slabel5.Left:=143;
+    slabel6.Left:=145;
+    slabel5.Width:=590;
+    slabel6.Width:=590;
+    simage1.visible:=false;
+    slabel5.Caption:='Какой девиз у дома Талли?';
+    slabel6.Caption:='Какой девиз у дома Талли?';
+    sLabel15.Visible:=false;
+    sLabel16.Visible:=false;
+    sLabel17.Visible:=false;
+    sLabel18.Visible:=false;
+    sLabel13.Visible:=true;
+    sLabel11.Visible:=true;
+    sLabel9.Visible:=true;
+    sLabel7.Visible:=true;
+    sLabel7.Caption:='Никто, кроме тебя' ;
+    sLabel8.Caption:= 'Никто, кроме тебя' ;
+    sLabel15.Caption:= 'Никто, кроме тебя'  ;
+    sLabel9.Caption:='Семья и честь' ;
+    sLabel10.Caption:= 'Семья и честь' ;
+    sLabel17.Caption:= 'Семья и честь'  ;
+    sLabel11.Caption:='Никто другой' ;
+    sLabel12.Caption:= 'Никто другой' ;
+    sLabel16.Caption:= 'Никто другой'  ;
+    sLabel13.Caption:='Семья, Долг, Честь' ;
+    sLabel14.Caption:= 'Семья, Долг, Честь' ;
+    sLabel18.Caption:= 'Семья, Долг, Честь'  ;
+    sGauge1.Progress:= sGauge1.Progress+10;
+    sImage1.Visible:=false;
+    sImage2.Visible:=false;
+    end;
+90:
+    begin
+    sLabel3.Caption:='10';
+    slabel5.Left:=163;
+    slabel6.Left:=165;
+    slabel5.Width:=590;
+    slabel6.Width:=590;
+    simage1.visible:=false;
+    slabel5.Caption:='Как был разрушен Харренхолл?';
+    slabel6.Caption:='Как был разрушен Харренхолл?';
+    sLabel15.Visible:=false;
+    sLabel16.Visible:=false;
+    sLabel17.Visible:=false;
+    sLabel18.Visible:=false;
+    sLabel13.Visible:=true;
+    sLabel11.Visible:=true;
+    sLabel9.Visible:=true;
+    sLabel7.Visible:=true;
+    sLabel7.Caption:='Драконом' ;
+    sLabel8.Caption:= 'Драконом' ;
+    sLabel15.Caption:= 'Драконом'  ;
+    sLabel9.Caption:='Диким огнем' ;
+    sLabel10.Caption:= 'Диким огнем' ;
+    sLabel17.Caption:= 'Диким огнем'  ;
+    sLabel11.Caption:='Одичалыми' ;
+    sLabel12.Caption:= 'Одичалыми' ;
+    sLabel16.Caption:= 'Одичалыми'  ;
+    sLabel13.Caption:='Он не разрушен' ;
+    sLabel14.Caption:= 'Он не разрушен' ;
+    sLabel18.Caption:= 'Он не разрушен'  ;
+    sGauge1.Progress:= sGauge1.Progress+10;
+    sImage1.Visible:=false;
+    sImage2.Visible:=false;
+    end;
+100: begin
+    slabel5.Caption:='Колличество правильных ответов: '+IntToStr(otv);
+    slabel6.Caption:='Колличество правильных ответов: '+IntToStr(otv);
+    slabel5.left:=230;
+    slabel6.left:=232;
+     if otv<=4 then
+      sLabel2.Visible:=true;
+    if (otv>4) and (otv<8) then
+      sLabel4.Visible:=true;
+    if otv>=8 then
+      sLabel19.Visible:=true;
+    sLabel15.Visible:=false;
+    sLabel16.Visible:=false;
+    sLabel17.Visible:=false;
+    sLabel18.Visible:=false;
+    sImage1.Visible:=false;
+    sImage2.Visible:=false;
+    slabel1.Caption :='Результаты' ;
+    end;
+end;
+end;
+
+procedure TForm18.FormActivate(Sender: TObject);
+begin
+otv:=0;
+sLabel16.Font.Color:=clMaroon;
+sLabel15.Font.Color:=clMaroon;
+sLabel17.Font.Color:=clMaroon;
+sLabel18.Font.Color:=clMaroon;
+sLabel13.Visible:=true;
+sLabel11.Visible:=true;
+sLabel9.Visible:=true;
+sLabel7.Visible:=true;
+sLabel15.Visible:=false;
+sLabel16.Visible:=false;
+sLabel17.Visible:=false;
+sLabel18.Visible:=false;
+simage1.visible:=false;
+sLabel3.Caption:='1';
+slabel5.left:=123;
+slabel6.left:=125;
+slabel5.Top:=90;
+slabel6.Top:=90;
+slabel5.height:=114;
+slabel6.height:=114;
+slabel5.width:=580;
+slabel6.width:=580;
+sLabel2.Visible:=False;
+sLabel4.Visible:=False;
+sLabel19.Visible:=False;
+sLabel5.Caption:='Как звали сына Дорана Мартелла?';
+sLabel6.Caption:='Как звали сына Дорана Мартелла?';
+sLabel7.Caption:='Питер Мартелл' ;
+sLabel8.Caption:= 'Питер Мартелл' ;
+sLabel15.Caption:= 'Питер Мартелл'  ;
+sLabel9.Caption:='Локк Сент' ;
+sLabel10.Caption:= 'Локк Сент' ;
+sLabel17.Caption:= 'Локк Сент'  ;
+sLabel11.Caption:='Тристан Мартелл' ;
+sLabel12.Caption:= 'Тристан Мартелл' ;
+sLabel16.Caption:= 'Тристан Мартелл'  ;
+sLabel13.Caption:='Джонн Сент' ;
+sLabel14.Caption:= 'Джонн Сент' ;
+sLabel18.Caption:= 'Джонн Сент'  ;
+sGauge1.Progress:=10;
+sLabel3.Visible:=true;
+slabel1.Caption :='Вопрос номер' ;
+end;
+
+end.
